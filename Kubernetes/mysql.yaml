@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-pod
+  labels:
+    app: svc-mysql-pod
+spec:
+  containers:
+  - name: mysql-pod
+    image: mysql
+    ports:
+      - containerPort: 3306
+    resources:
+      limits:
+        cpu: "1"
+        memory: "1Gi"
